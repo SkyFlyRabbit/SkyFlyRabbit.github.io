@@ -6,17 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Gradon</title>
+  <title>Blcok详解 | Gradon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="just do it">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Gradon">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="前言本文会对block按照下面几部分进行逐步归纳总结:1.Block基础2.Block验证
+Block基础1.文档定义在文档中搜索关键词:working with blocks,就会看到文档中对block的定义(图片来自这里):
+2.数据结构block数据结构定义(图片来自这里):对应的结构体定义如下(在这里我们可以看到苹果公开的block的源码):通过该图，我们可以知道，一个 block 实例实">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blcok详解">
+<meta property="og:url" content="http://yoursite.com/2017/09/18/Blcok详解/index.html">
 <meta property="og:site_name" content="Gradon">
-<meta property="og:description" content="just do it">
+<meta property="og:description" content="前言本文会对block按照下面几部分进行逐步归纳总结:1.Block基础2.Block验证
+Block基础1.文档定义在文档中搜索关键词:working with blocks,就会看到文档中对block的定义(图片来自这里):
+2.数据结构block数据结构定义(图片来自这里):对应的结构体定义如下(在这里我们可以看到苹果公开的block的源码):通过该图，我们可以知道，一个 block 实例实">
+<meta property="og:image" content="http://yoursite.com/images/Blcok详解/block官方文档.png">
+<meta property="og:image" content="http://yoursite.com/images/Blcok详解/block结构.jpg">
+<meta property="og:image" content="http://yoursite.com/images/Blcok详解/block结构代码.png">
+<meta property="og:updated_time" content="2017-09-17T12:43:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gradon">
-<meta name="twitter:description" content="just do it">
+<meta name="twitter:title" content="Blcok详解">
+<meta name="twitter:description" content="前言本文会对block按照下面几部分进行逐步归纳总结:1.Block基础2.Block验证
+Block基础1.文档定义在文档中搜索关键词:working with blocks,就会看到文档中对block的定义(图片来自这里):
+2.数据结构block数据结构定义(图片来自这里):对应的结构体定义如下(在这里我们可以看到苹果公开的block的源码):通过该图，我们可以知道，一个 block 实例实">
+<meta name="twitter:image" content="http://yoursite.com/images/Blcok详解/block官方文档.png">
   
     <link rel="alternative" href="/atom.xml" title="Gradon" type="application/atom+xml">
   
@@ -156,166 +167,140 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Blcok详解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Blcok详解
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/18/Blcok详解/" class="archive-article-date">
+
+        
+        <a href="/2017/09/18/Blcok详解/" class="archive-article-date">
   	<time datetime="2017-09-18T00:13:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-17</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/18/Blcok详解/">Blcok详解</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文会对block按照下面几部分进行逐步归纳总结:<br>1.Block基础<br>2.Block验证</p>
+<h2 id="Block基础"><a href="#Block基础" class="headerlink" title="Block基础"></a>Block基础</h2><h3 id="1-文档定义"><a href="#1-文档定义" class="headerlink" title="1.文档定义"></a>1.文档定义</h3><p>在文档中搜索关键词:working with blocks,就会看到文档中对block的定义(图片来自<a href="http://1gcode.com/2015/10/03/notes-iOS-Block01/" target="_blank" rel="external">这里</a>):<br><img src="/images/Blcok详解/block官方文档.png" alt=""></p>
+<h3 id="2-数据结构"><a href="#2-数据结构" class="headerlink" title="2.数据结构"></a>2.数据结构</h3><p>block数据结构定义(图片来自<a href="http://www.galloway.me.uk/2013/05/a-look-inside-blocks-episode-3-block-copy/" target="_blank" rel="external">这里</a>):<br><img src="/images/Blcok详解/block结构.jpg" alt=""><br>对应的结构体定义如下(在这里我们可以看到苹果公开的block的<a href="https://llvm.org/svn/llvm-project/compiler-rt/tags/Apple/Libcompiler_rt-10/BlocksRuntime/Block_private.h" target="_blank" rel="external">源码</a>):<br><img src="/images/Blcok详解/block结构代码.png" alt=""><br>通过该图，我们可以知道，一个 block 实例实际上由 6 部分构成：<br>    1.isa 指针，所有对象都有该指针，用于实现对象相关的功能。<br>    2.flags，用于按 bit 位表示一些 block 的附加信息，本文后面介绍 block copy 的实现代码可以看到对该变量的使用。<br>    3.reserved，保留变量。<br>    4.invoke，函数指针，指向具体的 block 实现的函数调用地址。<br>    5.descriptor， 表示该 block 的附加描述信息，主要是 size 大小，以及 copy 和 dispose 函数的指针。<br>    6.variables，capture 过来的变量，block 能够访问它外部的局部变量，就是因为将这些变量（或变量的地址）复制到了结构体中。</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/18/Blcok详解/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/14/浏览器设置手机模式浏览/" class="archive-article-date">
-  	<time datetime="2017-09-14T14:05:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-14</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/14/浏览器设置手机模式浏览/">浏览器设置手机模式浏览</a>
-    </h1>
+  
+    <a href="/2017/09/14/浏览器设置手机模式浏览/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">浏览器设置手机模式浏览</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/20/iOS向分类中添加实例变量/" class="archive-article-date">
-  	<time datetime="2017-03-20T13:55:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-20</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/20/Java学习教程一/" class="archive-article-date">
-  	<time datetime="2017-03-20T12:52:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-20</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/19/bulidPersonalBlog/" class="archive-article-date">
-  	<time datetime="2017-03-19T13:05:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-19</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/23/hello-world/" class="archive-article-date">
-  	<time datetime="2017-02-23T08:29:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -338,8 +323,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

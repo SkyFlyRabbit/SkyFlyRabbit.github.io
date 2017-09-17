@@ -158,6 +158,59 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Blcok详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/18/Blcok详解/">Blcok详解</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/18/Blcok详解/" class="archive-article-date">
+  	<time datetime="2017-09-18T00:13:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文会对block按照下面几部分进行逐步归纳总结:<br>1.Block基础<br>2.Block验证</p>
+<h2 id="Block基础"><a href="#Block基础" class="headerlink" title="Block基础"></a>Block基础</h2><h3 id="1-文档定义"><a href="#1-文档定义" class="headerlink" title="1.文档定义"></a>1.文档定义</h3><p>在文档中搜索关键词:working with blocks,就会看到文档中对block的定义(图片来自<a href="http://1gcode.com/2015/10/03/notes-iOS-Block01/" target="_blank" rel="external">这里</a>):<br><img src="/images/Blcok详解/block官方文档.png" alt=""></p>
+<h3 id="2-数据结构"><a href="#2-数据结构" class="headerlink" title="2.数据结构"></a>2.数据结构</h3><p>block数据结构定义(图片来自<a href="http://www.galloway.me.uk/2013/05/a-look-inside-blocks-episode-3-block-copy/" target="_blank" rel="external">这里</a>):<br><img src="/images/Blcok详解/block结构.jpg" alt=""><br>对应的结构体定义如下(在这里我们可以看到苹果公开的block的<a href="https://llvm.org/svn/llvm-project/compiler-rt/tags/Apple/Libcompiler_rt-10/BlocksRuntime/Block_private.h" target="_blank" rel="external">源码</a>):<br><img src="/images/Blcok详解/block结构代码.png" alt=""><br>通过该图，我们可以知道，一个 block 实例实际上由 6 部分构成：<br>    1.isa 指针，所有对象都有该指针，用于实现对象相关的功能。<br>    2.flags，用于按 bit 位表示一些 block 的附加信息，本文后面介绍 block copy 的实现代码可以看到对该变量的使用。<br>    3.reserved，保留变量。<br>    4.invoke，函数指针，指向具体的 block 实现的函数调用地址。<br>    5.descriptor， 表示该 block 的附加描述信息，主要是 size 大小，以及 copy 和 dispose 函数的指针。<br>    6.variables，capture 过来的变量，block 能够访问它外部的局部变量，就是因为将这些变量（或变量的地址）复制到了结构体中。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/18/Blcok详解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-浏览器设置手机模式浏览" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
